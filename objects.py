@@ -1,9 +1,12 @@
 import pywhatkit, sys, time, itertools, threading, os, random, pytz, json, math
+import simpleaudio
 import numpy as np
 from datetime import datetime
 
 
 class World:
+
+    music = simpleaudio.WaveObject.from_wave_file("song.wav")
     
     def singAsong():
         song = "word.execute(me);"

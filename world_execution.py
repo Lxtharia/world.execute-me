@@ -24,18 +24,18 @@ class style:
 Complite = False
 while Complite == False:
     #World.singAsong()
-    cnt = 3
-    for x in range(3):
-        if cnt != 0:
-            print(f"play yout music in {cnt}")
-            cnt -= 1
+    for x in range(3,0,-1):
+            print(f"Starting in {x}")
             time.sleep(1)
     print(f"START !!!")
+    World.music.play()
+
     time.sleep(0.5)
     power_line = False
     World.slow_print(style.RED+"Switch on the power line"+style.RESET,0.03 )
     power_line = True
     print("\n>>> power line : "+str(power_line))
+
     time.sleep(0.3)
     rtpp = [style.RED+"!!! Remember to put on !!!"+style.RESET,style.RED+"!!! Remember to put on PROTECTION !!!"+style.RESET]
     count =0
@@ -48,6 +48,7 @@ while Complite == False:
             count +=1
             sys.stdout.flush()
     print()
+
     password = ["ᛞ","ᚫ","ᛉ","ᚵ","ᛒ","ᛍ","ᛣ","ᛤ","ᛄ"]
     World.getPass(password)
     World.slow_print(style.RED+"Lay down your pieces"+style.RESET,0.02 )
